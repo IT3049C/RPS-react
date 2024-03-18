@@ -1,6 +1,6 @@
 import {PropTypes} from 'prop-types';
 import { useState } from 'react';
-import { RockPaperScissors } from '../RPS';
+import { RockPaperScissors } from '../RPS.js';
 
 const GameScreen = ({name}) => {
   const [ game ] = useState(new RockPaperScissors(name));
