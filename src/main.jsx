@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom'
-import Game from './routes/RPS-Game/Game.jsx'
-import ErrorPage from './routes/error.jsx'
+import './index.css'
+import Layout from './components/Layout.jsx'
 import HomePage from './routes/HomePage.jsx'
 import AboutPage from './routes/AboutPage.jsx'
-import Layout from './routes/Layout.jsx'
+import ErrorPage from './routes/ErrorPage.jsx'
+import Game from './routes/RPS-Game/Game.jsx'
 
 const routes = createBrowserRouter([
   {
