@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import './App.css'
+import './Game.css'
 import { WelcomeScreen as Welcome } from './screens/WelcomeScreen'
 import Game from './screens/GameScreen'
 
-function App() {
+function RPSGame() {
   const [name, setName] = useState(`Bearcat`)
   const [gameStarted, setGameStarted] = useState(false)
 
@@ -22,4 +22,4 @@ function App() {
   )
 }
 
-export default App
+export default RPSGame
