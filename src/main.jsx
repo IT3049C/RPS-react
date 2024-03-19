@@ -5,17 +5,33 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom'
-import App from './routes/RPS-Game/Game.jsx'
+import Game from './routes/RPS-Game/Game.jsx'
 import ErrorPage from './routes/error.jsx'
+import HomePage from './routes/HomePage.jsx'
+import AboutPage from './routes/AboutPage.jsx'
+import Layout from './routes/Layout.jsx'
 
 const routes = createBrowserRouter([
-  { 
-    path: '/', 
-    element: <App />,
-    exact: true,
+  {
+    path: `/`,
+    element: <Layout />,
     errorElement: <ErrorPage />,
-  },
-], {basename: '/rps-react'})
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: `/rps`,
+        element: <Game />,
+      },
+      {
+        path: `/about`,
+        element: <AboutPage />,
+      },
+    ]
+  }
+], {basename: import.meta.env.BASE_URL})
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

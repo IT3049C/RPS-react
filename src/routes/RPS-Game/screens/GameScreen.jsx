@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { RockPaperScissors } from '../RPS.js';
 
 const GameScreen = ({name}) => {
-  const [ game ] = useState(new RockPaperScissors(name));
+  const [ game, setGame ] = useState(new RockPaperScissors(name));
   const [ selection, setSelection ] = useState(`rock`);
   const [ score, setScore ] = useState({user: 0, cpu: 0});
   const [ history, setHistory ] = useState([]);    
@@ -18,6 +18,13 @@ const GameScreen = ({name}) => {
     game.play(selection);
     console.log(game.score);
     updateScoreAndHistory();
+  }
+
+  const onResetGameButtonClick = () => {
+    console.log(`Reset button was clicked`);
+    setGame(new RockPaperScissors(name));
+    setScore({user: 0, cpu: 0});
+    setHistory([]);
   }
 
   return (
@@ -60,7 +67,7 @@ const GameScreen = ({name}) => {
           ))}
         </ul>
       </div>
-      <button id="reset-game-button" className="btn btn-secondary">
+      <button id="reset-game-button" className="btn btn-secondary" onClick={onResetGameButtonClick}>
         Reset
       </button>
     </div>
