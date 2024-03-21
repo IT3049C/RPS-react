@@ -1,6 +1,7 @@
 import {PropTypes} from 'prop-types';
 import { useState } from 'react';
 import { RockPaperScissors } from '../../../RPS';
+import Button from '../../../components/Button';
 
 const GameScreen = ({name}) => {
   const [ game, setGame ] = useState(new RockPaperScissors(name));
@@ -60,9 +61,9 @@ const GameScreen = ({name}) => {
             </option>
           </select>
         </div>
-        <button className="btn btn-success" type="button" id="go-button" onClick={onGoButtonClick}>
+        <Button className="btn btn-success" type="button" id="go-button" onClick={onGoButtonClick}>
           Go!
-        </button>
+        </Button>
       </form>
 
       <div id="game-history">

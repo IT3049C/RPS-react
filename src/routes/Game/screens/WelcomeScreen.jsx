@@ -26,6 +26,10 @@ export const WelcomeScreen = ({ name, onNameChange, onGameStart }) => {
           />
         </div>
         <button 
+          style={{
+            backgroundColor: `yellow`,
+            color: `black`
+          }}
           className="btn btn-primary" 
           id="start-game-button" type="button" 
           onClick={onStartGameClick}>
