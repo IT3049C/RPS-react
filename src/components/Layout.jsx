@@ -5,7 +5,6 @@ function Layout() {
     return <>
         <Navbar />
         <Outlet />
-        <p>hjgsdajkfgsadkfhjkhsdgfjhk</p>
     </>
 }
 

@@ -1,4 +1,5 @@
 import {PropTypes} from 'prop-types';
+import styles from '../Game.css'
 
 export const WelcomeScreen = ({ name, onNameChange, onGameStart }) => {
 
@@ -26,11 +27,11 @@ export const WelcomeScreen = ({ name, onNameChange, onGameStart }) => {
           />
         </div>
         <button 
-          style={{
-            backgroundColor: `yellow`,
-            color: `black`
-          }}
-          className="btn btn-primary" 
+          // style={{
+          //   backgroundColor: `yellow`,
+          //   color: `black`
+          // }}
+          className={styles.buttonStyle} 
           id="start-game-button" type="button" 
           onClick={onStartGameClick}>
           Start Game!

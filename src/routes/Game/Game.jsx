@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './Game.css'
+import styles from './Game.css'
 import { WelcomeScreen as Welcome } from './screens/WelcomeScreen'
 import Game from './screens/GameScreen'
 
@@ -9,7 +9,7 @@ function RPSGame() {
 
   return (
     <>
-      <div>
+      <div className={styles.buttonStyle}>
           {/* <img src={reactLogo} className="logo react" alt="React logo" /> */}
           <h1>Rock Paper Scissors</h1> 
       </div>

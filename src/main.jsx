@@ -1,40 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import RPSGame from './routes/Game/Game.jsx'
-import {
-  createBrowserRouter,
-  RouterProvider
-} from 'react-router-dom'
 import './index.css'
-import HomePage from './routes/HomePage.jsx'
-import AboutPage from './routes/AboutPage.jsx'
-import ErrorPage from './routes/ErrorPage.jsx'
-import Layout from './components/Layout.jsx'
-
-const routes = createBrowserRouter([
-  {
-    path: `/`,
-    element: <Layout />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <HomePage />
-      },
-      {
-        path: `/rps`,
-        element: <RPSGame />
-      },
-      {
-        path: `/about`,
-        element: <AboutPage />
-      }
-    ]
-  },
-], { basename: import.meta.env.BASE_URL})
+import { Providers } from './contexts/Providers.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={routes} />
+    <Providers />
   </React.StrictMode>,
 )
